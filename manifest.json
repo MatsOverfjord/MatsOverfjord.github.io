@@ -1,0 +1,9 @@
+{
+    "name" : "PWA Demo",
+    "short_name" : "PWA Demo",
+    "lang" : "en-US",
+    "start_url" : "/index.html",
+    "display" : "standalone",
+    "background_color" : "white",
+    "theme_color" : "black"
+}
