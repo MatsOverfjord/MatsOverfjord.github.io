@@ -1,7 +1,6 @@
-window.onload  = () => {
-    console.log('window-load');
+window.onload = () => {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker
         .register('./serviceWorker.js');
     }
-};
+}
