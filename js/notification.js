@@ -10,7 +10,7 @@ async function showNotification() {
 	if (result === 'granted') {
 		const noti = new Notification('Hello!', {
 			body: 'It’s me.',
-			icon: 'images/favicon.png'
+			icon: 'images/favicon.ico'
 		});
 		noti.onclick = () => alert('clicked');
 	}
