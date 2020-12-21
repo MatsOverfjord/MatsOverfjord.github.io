@@ -4,7 +4,7 @@ Notification.requestPermission(function(status) {
 
 /*
   Fungerar
-
+*/
 async function showNotification() {
 	const result = await Notification.requestPermission();
 	if (result === 'granted') {
@@ -17,4 +17,3 @@ async function showNotification() {
 }
 showNotification();
 
-*/
