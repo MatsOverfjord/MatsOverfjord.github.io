@@ -1,8 +1,8 @@
-function forceSWupdate () {
+/* function forceSWupdate () {
         alert('Force update');
         location.reload();
        
-};
+}; */
 
 
 window.onload  = () => {
@@ -10,10 +10,6 @@ window.onload  = () => {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./serviceWorker.js')
         .then(function(registration) {
-        // registration worked
-        console.log('Registration succeeded.');
-        
-        
          registration.pushManager.getSubscription()
          .then(function (subscription) {
            //If already access granted, enable push button status
