@@ -17,5 +17,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     })
 });
-
-// https://BoGrusDev.github.io

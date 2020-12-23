@@ -1,5 +1,5 @@
-const cacheName = "demo-pwa-v18";
-const VERSION = "v18";
+const cacheName = "prov-pwa-v1";
+const VERSION = "v1";
 const filesToCache = [
         '/index.html',
         '/manifest.json',
@@ -7,17 +7,11 @@ const filesToCache = [
         '/inc/header.html',
         '/css/bulma.min.css',
         '/js/bulma.js',
-        '/images/bild1.jpg',
-        '/images/bild2.jpg',
-        '/images/bild3.jpg',
-        '/images/bild4.jpg',
-        '/images/bild5.jpg',
-        '/images/bild6.jpg',
-        '/images/bild7.jpg',
-        '/images/bild8.jpg',
+        '/images/beach.jpg',
+        '/images/shenzhen.jpg'
 ];
 
-//  
+
 
 self.addEventListener ('install', function(e) {
     console.log('install');
@@ -36,13 +30,6 @@ self.addEventListener ('install', function(e) {
         
     );
 });
-
-/*
-self.addEventListener('activate', event => {
-  console.log('V1 now ready to handle fetches!');
-});
-*/
-
 
 self.addEventListener('activate', function (event) { 
   //on activate 
@@ -81,50 +68,7 @@ self.addEventListener('fetch', (event) => {
   )
 })
 
-/*
-self.addEventListener('fetch', function (event) {
-  // console.log('default');
-  event.respondWith(
-      fetch(event.request).catch(function() {
-          return caches.match(event.request)
-      })
-  )
-})
-*/
-/*
-self.addEventListener('fetch', function(e) {
-  // console.log('fetch network');
-  e.respondWith(fetch(e.request)
-      .then(function(response) {
-          return response || caches.match(e.request);
-      })
-  );
-});
 
-
-
-
-/*
-
-*/
-
-
-
-/*
-self.addEventListener('push', event => {
-  var payload = event.data.text();
-  var options = {
-          body: payload,
-          icon: '~/images/favicon.ico',
-
-          requireInteraction: true
-          //data : payload
-      };
-
-  event.waitUntil(self.registration.showNotification('Notification Testing', options));
-});
-
-*/
 
 // Register event listener for the 'push' event.
 self.addEventListener('push', function(event) {
